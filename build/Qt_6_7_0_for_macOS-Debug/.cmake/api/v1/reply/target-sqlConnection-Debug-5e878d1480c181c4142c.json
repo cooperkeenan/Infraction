@@ -485,7 +485,7 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "db/mydb.sqlite",
+			"path" : "db/InfractionDB.sqlite",
 			"sourceGroupIndex" : 2
 		},
 		{
