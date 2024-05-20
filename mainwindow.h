@@ -6,7 +6,6 @@
 #include <QSqlQuery>
 #include <QMessageBox>
 
-
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -23,8 +22,11 @@ public:
 
 private slots:
     void on_btn_connectDB_clicked();
+    void on_btn_continue_clicked();  // Ensure this matches the implementation
+    void on_loginButton_clicked();
 
 private:
     Ui::MainWindow *ui;
+    QSqlDatabase sqlitedb;
 };
 #endif // MAINWINDOW_H
