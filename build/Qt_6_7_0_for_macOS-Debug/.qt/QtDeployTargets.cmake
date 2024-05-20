@@ -1,1 +1,0 @@
-set(__QT_DEPLOY_TARGET_sqlConnection_FILE /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/sqlConnection.app/Contents/MacOS/sqlConnection)
