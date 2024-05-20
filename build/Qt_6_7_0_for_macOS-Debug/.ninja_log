@@ -99,3 +99,9 @@
 4	32	1716224541663261045	/Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/sqlConnection_autogen/mocs_compilation.cpp	3f91635b8d11ba2b
 34	992	1716224542615851555	CMakeFiles/sqlConnection.dir/mainwindow.cpp.o	7f65600907be2550
 992	1141	1716224542770126368	sqlConnection.app/Contents/MacOS/sqlConnection	bbcd17bab5de6c03
+7	33	1716226306668563636	sqlConnection_autogen/timestamp	3f91635b8d11ba2b
+7	33	1716226306668563636	sqlConnection_autogen/mocs_compilation.cpp	3f91635b8d11ba2b
+7	33	1716226306668563636	/Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/sqlConnection_autogen/timestamp	3f91635b8d11ba2b
+7	33	1716226306668563636	/Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/sqlConnection_autogen/mocs_compilation.cpp	3f91635b8d11ba2b
+35	1129	1716226307745002219	CMakeFiles/sqlConnection.dir/mainwindow.cpp.o	7f65600907be2550
+1129	1303	1716226307935392973	sqlConnection.app/Contents/MacOS/sqlConnection	bbcd17bab5de6c03

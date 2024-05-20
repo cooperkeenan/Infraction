@@ -21,6 +21,8 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+//Attempt to connect to database
 void MainWindow::on_btn_connectDB_clicked()
 {
     sqlitedb = QSqlDatabase::addDatabase("QSQLITE");
@@ -33,11 +35,15 @@ void MainWindow::on_btn_connectDB_clicked()
     }
 }
 
+
+//Continue to Sign in
 void MainWindow::on_btn_continue_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
 }
 
+
+//Sign in Function
 void MainWindow::on_loginButton_clicked()
 {
     QString username = ui->usernameLineEdit->text();
