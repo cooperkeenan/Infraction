@@ -25,6 +25,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         db/InfractionDB.sqlite
+        dashboard.h dashboard.cpp dashboard.ui
 
     )
 # Define target properties for Android with Qt 6 as:

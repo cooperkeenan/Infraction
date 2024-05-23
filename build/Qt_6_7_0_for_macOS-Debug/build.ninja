@@ -73,6 +73,14 @@ build CMakeFiles/sqlConnection.dir/mainwindow.cpp.o: CXX_COMPILER__sqlConnection
   OBJECT_DIR = CMakeFiles/sqlConnection.dir
   OBJECT_FILE_DIR = CMakeFiles/sqlConnection.dir
 
+build CMakeFiles/sqlConnection.dir/dashboard.cpp.o: CXX_COMPILER__sqlConnection_unscanned_Debug /Users/cooperkeenan/Qt_Projects/sqlConnection/dashboard.cpp || cmake_object_order_depends_target_sqlConnection
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/sqlConnection.dir/dashboard.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/sqlConnection_autogen/include -isystem /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Headers -iframework /Users/cooperkeenan/Qt/6.7.0/macos/lib -isystem /Users/cooperkeenan/Qt/6.7.0/macos/mkspecs/macx-clang -isystem /Users/cooperkeenan/Qt/6.7.0/macos/include -isystem /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Headers -isystem /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Headers -isystem /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Headers
+  OBJECT_DIR = CMakeFiles/sqlConnection.dir
+  OBJECT_FILE_DIR = CMakeFiles/sqlConnection.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target sqlConnection
@@ -81,7 +89,7 @@ build CMakeFiles/sqlConnection.dir/mainwindow.cpp.o: CXX_COMPILER__sqlConnection
 #############################################
 # Link the executable sqlConnection.app/Contents/MacOS/sqlConnection
 
-build sqlConnection.app/Contents/MacOS/sqlConnection: CXX_EXECUTABLE_LINKER__sqlConnection_Debug CMakeFiles/sqlConnection.dir/sqlConnection_autogen/mocs_compilation.cpp.o CMakeFiles/sqlConnection.dir/main.cpp.o CMakeFiles/sqlConnection.dir/mainwindow.cpp.o | /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/QtGui /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore || sqlConnection_autogen sqlConnection_autogen_timestamp_deps
+build sqlConnection.app/Contents/MacOS/sqlConnection: CXX_EXECUTABLE_LINKER__sqlConnection_Debug CMakeFiles/sqlConnection.dir/sqlConnection_autogen/mocs_compilation.cpp.o CMakeFiles/sqlConnection.dir/main.cpp.o CMakeFiles/sqlConnection.dir/mainwindow.cpp.o CMakeFiles/sqlConnection.dir/dashboard.cpp.o | /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/QtGui /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore || sqlConnection_autogen sqlConnection_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
   LINK_LIBRARIES = -Wl,-rpath,/Users/cooperkeenan/Qt/6.7.0/macos/lib  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/QtGui  -Xlinker -framework -Xlinker OpenGL  -Xlinker -framework -Xlinker AGL  -framework AppKit  -framework ImageIO  -framework Metal  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration
   LINK_PATH = -iframework /Users/cooperkeenan/Qt/6.7.0/macos/lib
@@ -167,7 +175,7 @@ build sqlConnection_autogen_timestamp_deps: phony CMakeFiles/sqlConnection_autog
 #############################################
 # Utility command for sqlConnection_autogen
 
-build sqlConnection_autogen: phony CMakeFiles/sqlConnection_autogen sqlConnection_autogen/include/ui_mainwindow.h sqlConnection_autogen/timestamp sqlConnection_autogen/mocs_compilation.cpp sqlConnection_autogen_timestamp_deps
+build sqlConnection_autogen: phony CMakeFiles/sqlConnection_autogen sqlConnection_autogen/include/ui_mainwindow.h sqlConnection_autogen/include/ui_dashboard.h sqlConnection_autogen/timestamp sqlConnection_autogen/mocs_compilation.cpp sqlConnection_autogen_timestamp_deps
 
 
 #############################################
@@ -183,13 +191,13 @@ build sqlConnection_autogen/timestamp sqlConnection_autogen/mocs_compilation.cpp
 #############################################
 # Phony custom command for CMakeFiles/sqlConnection_autogen_timestamp_deps
 
-build CMakeFiles/sqlConnection_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/sqlConnection_autogen_timestamp_deps: phony /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/uic /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/moc /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql
+build CMakeFiles/sqlConnection_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/sqlConnection_autogen_timestamp_deps: phony /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/moc /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/uic /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets
 
 
 #############################################
 # Phony custom command for CMakeFiles/sqlConnection_autogen
 
-build CMakeFiles/sqlConnection_autogen sqlConnection_autogen/include/ui_mainwindow.h | ${cmake_ninja_workdir}CMakeFiles/sqlConnection_autogen ${cmake_ninja_workdir}sqlConnection_autogen/include/ui_mainwindow.h: phony sqlConnection_autogen/timestamp || sqlConnection_autogen_timestamp_deps
+build CMakeFiles/sqlConnection_autogen sqlConnection_autogen/include/ui_mainwindow.h sqlConnection_autogen/include/ui_dashboard.h | ${cmake_ninja_workdir}CMakeFiles/sqlConnection_autogen ${cmake_ninja_workdir}sqlConnection_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}sqlConnection_autogen/include/ui_dashboard.h: phony sqlConnection_autogen/timestamp || sqlConnection_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

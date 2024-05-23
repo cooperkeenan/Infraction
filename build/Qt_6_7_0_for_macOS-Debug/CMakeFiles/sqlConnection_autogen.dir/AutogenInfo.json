@@ -321,6 +321,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/Users/cooperkeenan/Qt_Projects/sqlConnection/dashboard.h",
+			"MU",
+			"EWIEGA46WW/moc_dashboard.cpp",
+			null
+		],
+		[
 			"/Users/cooperkeenan/Qt_Projects/sqlConnection/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -386,6 +392,11 @@
 	"SETTINGS_FILE" : "/Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/sqlConnection_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/Users/cooperkeenan/Qt_Projects/sqlConnection/dashboard.cpp",
+			"MU",
+			null
+		],
 		[ "/Users/cooperkeenan/Qt_Projects/sqlConnection/main.cpp", "MU", null ],
 		[
 			"/Users/cooperkeenan/Qt_Projects/sqlConnection/mainwindow.cpp",
