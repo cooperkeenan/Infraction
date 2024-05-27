@@ -313,7 +313,8 @@
 		"/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-relwithdebinfo.cmake",
 		"/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake",
 		"/Users/cooperkeenan/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/GNUInstallDirs.cmake",
-		"/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6/macos/Info.plist.app.in"
+		"/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6/macos/Info.plist.app.in",
+		"/Users/cooperkeenan/Qt_Projects/sqlConnection/resources.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "/Users/cooperkeenan/Qt_Projects/sqlConnection",
 	"DEP_FILE" : "/Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/sqlConnection_autogen/deps",

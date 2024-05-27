@@ -11,8 +11,8 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QWidget>
@@ -26,11 +26,10 @@ public:
     QStackedWidget *stackedWidget;
     QWidget *page;
     QGridLayout *gridLayout;
+    QGraphicsView *graphicsView;
     QSpacerItem *verticalSpacer_2;
-    QSpacerItem *horizontalSpacer;
-    QLabel *label;
-    QSpacerItem *horizontalSpacer_2;
     QSpacerItem *verticalSpacer;
+    QSpacerItem *horizontalSpacer_2;
     QWidget *page_2;
 
     void setupUi(QWidget *dashboard)
@@ -54,29 +53,22 @@ public:
         page->setObjectName("page");
         gridLayout = new QGridLayout(page);
         gridLayout->setObjectName("gridLayout");
+        graphicsView = new QGraphicsView(page);
+        graphicsView->setObjectName("graphicsView");
+
+        gridLayout->addWidget(graphicsView, 0, 1, 3, 1);
+
         verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        gridLayout->addItem(verticalSpacer_2, 0, 1, 1, 1);
-
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer, 1, 0, 1, 1);
-
-        label = new QLabel(page);
-        label->setObjectName("label");
-        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
-        label->setSizePolicy(sizePolicy);
-        label->setAlignment(Qt::AlignCenter);
-
-        gridLayout->addWidget(label, 1, 1, 1, 1);
-
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer_2, 1, 2, 1, 1);
+        gridLayout->addItem(verticalSpacer_2, 0, 2, 1, 1);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        gridLayout->addItem(verticalSpacer, 2, 1, 1, 1);
+        gridLayout->addItem(verticalSpacer, 2, 2, 1, 1);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_2, 1, 4, 1, 1);
 
         stackedWidget->addWidget(page);
         page_2 = new QWidget();
@@ -94,7 +86,6 @@ public:
     void retranslateUi(QWidget *dashboard)
     {
         dashboard->setWindowTitle(QCoreApplication::translate("dashboard", "Form", nullptr));
-        label->setText(QCoreApplication::translate("dashboard", "dashboard", nullptr));
     } // retranslateUi
 
 };

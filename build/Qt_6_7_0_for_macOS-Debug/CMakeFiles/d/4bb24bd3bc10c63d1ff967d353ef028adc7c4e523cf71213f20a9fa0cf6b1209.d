@@ -86,6 +86,11 @@ sqlConnection_autogen/timestamp: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/syslimits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/wait.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/QList \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/QObject \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/QRect \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/QSize \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/QSizeF \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/q20memory.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/q20type_traits.h \
@@ -115,10 +120,16 @@ sqlConnection_autogen/timestamp: \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qcontainerinfo.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qcontainertools_impl.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qcontiguouscache.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qcoreapplication.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qcoreapplication_platform.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qcoreevent.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qdarwinhelpers.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qdatastream.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qdeadlinetimer.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qdebug.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qelapsedtimer.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qendian.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qeventloop.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qexceptionhandling.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qflags.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qfloat16.h \
@@ -130,12 +141,14 @@ sqlConnection_autogen/timestamp: \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qglobalstatic.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qhash.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qhashfunctions.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qiodevice.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qiodevicebase.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qiterable.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qiterator.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qlatin1stringview.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qline.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qlist.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qlocale.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qlogging.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qmalloc.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qmap.h \
@@ -145,6 +158,7 @@ sqlConnection_autogen/timestamp: \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qmetatype.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qminmax.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qnamespace.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qnativeinterface.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qnumeric.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qobject.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qobject_impl.h \
@@ -197,35 +211,50 @@ sqlConnection_autogen/timestamp: \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qtversionchecks.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qtypeinfo.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qtypes.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qurl.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qvariant.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/QResizeEvent \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/QTransform \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qaction.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qbitmap.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qbrush.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qcolor.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qcursor.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qevent.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qeventpoint.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qfont.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qfontinfo.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qfontmetrics.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qguiapplication.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qguiapplication_platform.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qicon.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qimage.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qinputdevice.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qinputmethod.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qkeysequence.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qpaintdevice.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qpalette.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qpen.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qpixelformat.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qpixmap.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qpointingdevice.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qpolygon.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qregion.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qrgb.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qrgba64.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qscreen.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qscreen_platform.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qtgui-config.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qvector2d.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qvectornd.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/Headers/QSqlDatabase \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/Headers/QSqlQuery \
@@ -234,11 +263,13 @@ sqlConnection_autogen/timestamp: \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/Headers/qtsql-config.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/Headers/qtsqlexports.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/Headers/qtsqlglobal.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsScene \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QMessageBox \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qdialog.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qdialogbuttonbox.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qgraphicsscene.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qmessagebox.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
@@ -482,4 +513,5 @@ sqlConnection_autogen/timestamp: \
   /Users/cooperkeenan/Qt_Projects/sqlConnection/main.cpp \
   /Users/cooperkeenan/Qt_Projects/sqlConnection/mainwindow.cpp \
   /Users/cooperkeenan/Qt_Projects/sqlConnection/mainwindow.h \
-  /Users/cooperkeenan/Qt_Projects/sqlConnection/mainwindow.ui
+  /Users/cooperkeenan/Qt_Projects/sqlConnection/mainwindow.ui \
+  /Users/cooperkeenan/Qt_Projects/sqlConnection/resources.qrc

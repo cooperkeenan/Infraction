@@ -1,0 +1,19 @@
+{
+	"BUILD_DIR" : "/Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/sqlConnection_autogen",
+	"CMAKE_BINARY_DIR" : "/Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/cooperkeenan/Qt_Projects/sqlConnection",
+	"CMAKE_SOURCE_DIR" : "/Users/cooperkeenan/Qt_Projects/sqlConnection",
+	"INCLUDE_DIR" : "/Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/sqlConnection_autogen/include",
+	"INPUTS" : [ "/Users/cooperkeenan/Qt_Projects/sqlConnection/uk_map.png" ],
+	"LOCK_FILE" : "/Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/sqlConnection_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "/Users/cooperkeenan/Qt/6.7.0/macos/./libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/sqlConnection_autogen.dir/AutoRcc_resources_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/Users/cooperkeenan/Qt_Projects/sqlConnection/resources.qrc",
+	"VERBOSITY" : 0
+}
