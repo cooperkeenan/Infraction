@@ -236,6 +236,7 @@ sqlConnection_autogen/timestamp: \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/Headers/qtsqlglobal.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QMessageBox \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qdialog.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qdialogbuttonbox.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
@@ -475,6 +476,9 @@ sqlConnection_autogen/timestamp: \
   CMakeFiles/3.27.7/CMakeCXXCompiler.cmake \
   CMakeFiles/3.27.7/CMakeSystem.cmake \
   sqlConnection_autogen/moc_predefs.h \
+  /Users/cooperkeenan/Qt_Projects/sqlConnection/dashboard.cpp \
+  /Users/cooperkeenan/Qt_Projects/sqlConnection/dashboard.h \
+  /Users/cooperkeenan/Qt_Projects/sqlConnection/dashboard.ui \
   /Users/cooperkeenan/Qt_Projects/sqlConnection/main.cpp \
   /Users/cooperkeenan/Qt_Projects/sqlConnection/mainwindow.cpp \
   /Users/cooperkeenan/Qt_Projects/sqlConnection/mainwindow.h \

@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-29658b9112ed9254b976.json",
+					"jsonFile" : "directory-.-Debug-7c84a635533b12e620e9.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -18,7 +18,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -35,7 +36,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -43,15 +45,22 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "CopyDatabase::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CopyDatabase-Debug-a3930df97c39b553ac7d.json",
+					"name" : "CopyDatabase",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "sqlConnection::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-sqlConnection-Debug-7e093d81715a81ad3886.json",
+					"jsonFile" : "target-sqlConnection-Debug-34ac70842eb99b65b31f.json",
 					"name" : "sqlConnection",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "sqlConnection_autogen::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-sqlConnection_autogen-Debug-ae25be6da58a976d200e.json",
+					"jsonFile" : "target-sqlConnection_autogen-Debug-206aef7a455c7cc1899e.json",
 					"name" : "sqlConnection_autogen",
 					"projectIndex" : 0
 				},

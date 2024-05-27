@@ -9,15 +9,17 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Sql)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Sql)
-
+find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets Sql REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets Sql REQUIRED)
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+    main.cpp
+    mainwindow.cpp
+    mainwindow.h
+    mainwindow.ui
+    dashboard.h
+    dashboard.cpp
+    dashboard.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -25,36 +27,21 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         db/InfractionDB.sqlite
-        dashboard.h dashboard.cpp dashboard.ui
-
     )
-# Define target properties for Android with Qt 6 as:
-#    set_property(TARGET sqlConnection APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
-#                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
-# For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 else()
     if(ANDROID)
-        add_library(sqlConnection SHARED
-            ${PROJECT_SOURCES}
-        )
-# Define properties for Android with Qt 5 after find_package() calls as:
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
+        add_library(sqlConnection SHARED ${PROJECT_SOURCES})
     else()
-        add_executable(sqlConnection
-            ${PROJECT_SOURCES}
-        )
+        add_executable(sqlConnection ${PROJECT_SOURCES})
     endif()
 endif()
 
 target_link_libraries(sqlConnection PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Sql)
 
-
-# Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
-# If you are developing for iOS or macOS you should consider setting an
-# explicit, fixed bundle identifier manually though.
 if(${QT_VERSION} VERSION_LESS 6.1.0)
   set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.sqlConnection)
 endif()
+
 set_target_properties(sqlConnection PROPERTIES
     ${BUNDLE_ID_OPTION}
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
@@ -73,3 +60,22 @@ install(TARGETS sqlConnection
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(sqlConnection)
 endif()
+
+# Custom command to copy the database file to the build directory
+set(DB_SOURCE "${CMAKE_SOURCE_DIR}/db/InfractionDB.sqlite")
+set(DB_DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}/sqlConnection.app/Contents/Resources/db/InfractionDB.sqlite")
+
+message(STATUS "Copying database from ${DB_SOURCE} to ${DB_DESTINATION}")
+
+add_custom_command(
+    OUTPUT ${DB_DESTINATION}
+    COMMAND ${CMAKE_COMMAND} -E make_directory "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}/sqlConnection.app/Contents/Resources/db"
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${DB_SOURCE} ${DB_DESTINATION}
+    COMMENT "Copying database file to bundle"
+    VERBATIM
+)
+
+add_custom_target(CopyDatabase ALL DEPENDS ${DB_DESTINATION})
+add_dependencies(sqlConnection CopyDatabase)
+
+

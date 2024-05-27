@@ -5,6 +5,8 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QMessageBox>
+#include "dashboard.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -28,5 +30,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QSqlDatabase sqlitedb;
+    dashboard *dashboardWidget;
 };
 #endif // MAINWINDOW_H

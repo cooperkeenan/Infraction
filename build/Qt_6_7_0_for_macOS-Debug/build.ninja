@@ -47,7 +47,7 @@ cmake_ninja_workdir = /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7
 #############################################
 # Order-only phony target for sqlConnection
 
-build cmake_object_order_depends_target_sqlConnection: phony || sqlConnection_autogen sqlConnection_autogen/mocs_compilation.cpp sqlConnection_autogen/timestamp sqlConnection_autogen_timestamp_deps
+build cmake_object_order_depends_target_sqlConnection: phony || CopyDatabase sqlConnection_autogen sqlConnection_autogen/mocs_compilation.cpp sqlConnection_autogen/timestamp sqlConnection_autogen_timestamp_deps
 
 build CMakeFiles/sqlConnection.dir/sqlConnection_autogen/mocs_compilation.cpp.o: CXX_COMPILER__sqlConnection_unscanned_Debug /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/sqlConnection_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_sqlConnection
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB
@@ -89,7 +89,7 @@ build CMakeFiles/sqlConnection.dir/dashboard.cpp.o: CXX_COMPILER__sqlConnection_
 #############################################
 # Link the executable sqlConnection.app/Contents/MacOS/sqlConnection
 
-build sqlConnection.app/Contents/MacOS/sqlConnection: CXX_EXECUTABLE_LINKER__sqlConnection_Debug CMakeFiles/sqlConnection.dir/sqlConnection_autogen/mocs_compilation.cpp.o CMakeFiles/sqlConnection.dir/main.cpp.o CMakeFiles/sqlConnection.dir/mainwindow.cpp.o CMakeFiles/sqlConnection.dir/dashboard.cpp.o | /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/QtGui /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore || sqlConnection_autogen sqlConnection_autogen_timestamp_deps
+build sqlConnection.app/Contents/MacOS/sqlConnection: CXX_EXECUTABLE_LINKER__sqlConnection_Debug CMakeFiles/sqlConnection.dir/sqlConnection_autogen/mocs_compilation.cpp.o CMakeFiles/sqlConnection.dir/main.cpp.o CMakeFiles/sqlConnection.dir/mainwindow.cpp.o CMakeFiles/sqlConnection.dir/dashboard.cpp.o | /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/QtGui /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore || CopyDatabase sqlConnection_autogen sqlConnection_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
   LINK_LIBRARIES = -Wl,-rpath,/Users/cooperkeenan/Qt/6.7.0/macos/lib  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/QtGui  -Xlinker -framework -Xlinker OpenGL  -Xlinker -framework -Xlinker AGL  -framework AppKit  -framework ImageIO  -framework Metal  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration
   LINK_PATH = -iframework /Users/cooperkeenan/Qt/6.7.0/macos/lib
@@ -98,6 +98,12 @@ build sqlConnection.app/Contents/MacOS/sqlConnection: CXX_EXECUTABLE_LINKER__sql
   PRE_LINK = :
   TARGET_FILE = sqlConnection.app/Contents/MacOS/sqlConnection
   TARGET_PDB = sqlConnection.dbg
+
+
+#############################################
+# Utility command for CopyDatabase
+
+build CopyDatabase: phony CMakeFiles/CopyDatabase sqlConnection.app/Contents/Resources/db/InfractionDB.sqlite
 
 
 #############################################
@@ -175,13 +181,13 @@ build sqlConnection_autogen_timestamp_deps: phony CMakeFiles/sqlConnection_autog
 #############################################
 # Utility command for sqlConnection_autogen
 
-build sqlConnection_autogen: phony CMakeFiles/sqlConnection_autogen sqlConnection_autogen/include/ui_mainwindow.h sqlConnection_autogen/include/ui_dashboard.h sqlConnection_autogen/timestamp sqlConnection_autogen/mocs_compilation.cpp sqlConnection_autogen_timestamp_deps
+build sqlConnection_autogen: phony CMakeFiles/sqlConnection_autogen sqlConnection_autogen/include/ui_mainwindow.h sqlConnection_autogen/include/ui_dashboard.h sqlConnection_autogen/timestamp sqlConnection_autogen/mocs_compilation.cpp CopyDatabase sqlConnection_autogen_timestamp_deps
 
 
 #############################################
 # Custom command for sqlConnection_autogen/timestamp
 
-build sqlConnection_autogen/timestamp sqlConnection_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}sqlConnection_autogen/timestamp ${cmake_ninja_workdir}sqlConnection_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/moc /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/uic || sqlConnection_autogen_timestamp_deps
+build sqlConnection_autogen/timestamp sqlConnection_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}sqlConnection_autogen/timestamp ${cmake_ninja_workdir}sqlConnection_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/moc /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/uic || CopyDatabase sqlConnection_autogen_timestamp_deps
   COMMAND = cd /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug && /Users/cooperkeenan/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_autogen /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/sqlConnection_autogen.dir/AutogenInfo.json Debug && /Users/cooperkeenan/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E touch /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/sqlConnection_autogen/timestamp && /Users/cooperkeenan/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /Users/cooperkeenan/Qt_Projects/sqlConnection /Users/cooperkeenan/Qt_Projects/sqlConnection /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/sqlConnection_autogen/deps /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/d/4bb24bd3bc10c63d1ff967d353ef028adc7c4e523cf71213f20a9fa0cf6b1209.d
   DESC = Automatic MOC and UIC for target sqlConnection
   depfile = /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/d/4bb24bd3bc10c63d1ff967d353ef028adc7c4e523cf71213f20a9fa0cf6b1209.d
@@ -189,15 +195,30 @@ build sqlConnection_autogen/timestamp sqlConnection_autogen/mocs_compilation.cpp
 
 
 #############################################
+# Phony custom command for CMakeFiles/CopyDatabase
+
+build CMakeFiles/CopyDatabase | ${cmake_ninja_workdir}CMakeFiles/CopyDatabase: phony sqlConnection.app/Contents/Resources/db/InfractionDB.sqlite
+
+
+#############################################
+# Custom command for sqlConnection.app/Contents/Resources/db/InfractionDB.sqlite
+
+build sqlConnection.app/Contents/Resources/db/InfractionDB.sqlite | ${cmake_ninja_workdir}sqlConnection.app/Contents/Resources/db/InfractionDB.sqlite: CUSTOM_COMMAND
+  COMMAND = cd /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug && /Users/cooperkeenan/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E make_directory /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/./sqlConnection.app/Contents/Resources/db && /Users/cooperkeenan/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E copy_if_different /Users/cooperkeenan/Qt_Projects/sqlConnection/db/InfractionDB.sqlite /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/./sqlConnection.app/Contents/Resources/db/InfractionDB.sqlite
+  DESC = Copying database file to bundle
+  restat = 1
+
+
+#############################################
 # Phony custom command for CMakeFiles/sqlConnection_autogen_timestamp_deps
 
-build CMakeFiles/sqlConnection_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/sqlConnection_autogen_timestamp_deps: phony /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/moc /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/uic /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets
+build CMakeFiles/sqlConnection_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/sqlConnection_autogen_timestamp_deps: phony /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/moc /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/uic /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql
 
 
 #############################################
 # Phony custom command for CMakeFiles/sqlConnection_autogen
 
-build CMakeFiles/sqlConnection_autogen sqlConnection_autogen/include/ui_mainwindow.h sqlConnection_autogen/include/ui_dashboard.h | ${cmake_ninja_workdir}CMakeFiles/sqlConnection_autogen ${cmake_ninja_workdir}sqlConnection_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}sqlConnection_autogen/include/ui_dashboard.h: phony sqlConnection_autogen/timestamp || sqlConnection_autogen_timestamp_deps
+build CMakeFiles/sqlConnection_autogen sqlConnection_autogen/include/ui_mainwindow.h sqlConnection_autogen/include/ui_dashboard.h | ${cmake_ninja_workdir}CMakeFiles/sqlConnection_autogen ${cmake_ninja_workdir}sqlConnection_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}sqlConnection_autogen/include/ui_dashboard.h: phony sqlConnection_autogen/timestamp || CopyDatabase sqlConnection_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.
@@ -212,7 +233,7 @@ build sqlConnection: phony sqlConnection.app/Contents/MacOS/sqlConnection
 #############################################
 # Folder: /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug
 
-build all: phony sqlConnection.app/Contents/MacOS/sqlConnection
+build all: phony sqlConnection.app/Contents/MacOS/sqlConnection CopyDatabase
 
 # =============================================================================
 # Built-in targets

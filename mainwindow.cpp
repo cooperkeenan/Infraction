@@ -2,10 +2,13 @@
 #include "./ui_mainwindow.h"
 #include <QSqlError>
 #include <QDebug>  // For debugging
+#include <QCoreApplication>
+#include <QDir>
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    : QMainWindow(parent),
+    ui(new Ui::MainWindow),
+    dashboardWidget(new dashboard(this))  // Initialize the dashboard widget
 {
     ui->setupUi(this);
 
@@ -13,6 +16,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btn_continue, &QPushButton::clicked, this, &MainWindow::on_btn_continue_clicked);
     // Connect the login button to the slot
     connect(ui->loginButton, &QPushButton::clicked, this, &MainWindow::on_loginButton_clicked);
+
+    // Optionally hide the dashboard initially or setup accordingly
+    dashboardWidget->hide();  // If you want to add it directly to the main window later
+    // If using a QStackedWidget, you might add the dashboard to the stack:
+    ui->stackedWidget->addWidget(dashboardWidget);
 
 }
 
@@ -25,8 +33,18 @@ MainWindow::~MainWindow()
 //Attempt to connect to database
 void MainWindow::on_btn_connectDB_clicked()
 {
-    sqlitedb = QSqlDatabase::addDatabase("QSQLITE");
-    sqlitedb.setDatabaseName("/Users/cooperkeenan/Qt_Projects/sqlConnection/db/InfractionDB.sqlite");
+    QSqlDatabase sqlitedb = QSqlDatabase::addDatabase("QSQLITE");
+    QString dbPath = QDir(QCoreApplication::applicationDirPath()).filePath("../Resources/db/InfractionDB.sqlite");
+    qDebug() << "Database path:" << dbPath;
+    sqlitedb.setDatabaseName(dbPath);
+
+    QFile dbFile(dbPath);
+    if (!dbFile.exists()) {
+        qDebug() << "Database file does not exist:" << dbPath;
+    } else {
+        qDebug() << "Database file found:" << dbPath;
+    }
+
 
     if (!sqlitedb.open()) {
         QMessageBox::information(this, "Not Connected", "Database Not Connected");
@@ -68,9 +86,8 @@ void MainWindow::on_loginButton_clicked()
 
     if (query.next()) {
         qDebug() << "Displaying success message box";
-        QMessageBox::information(this, "Success", "Sign-in successful!");
         // Proceed to the next page or perform other actions
-        ui->stackedWidget->setCurrentIndex(1);
+        ui->stackedWidget->setCurrentWidget(dashboardWidget);
     } else {
         qDebug() << "Displaying incorrect credentials message box";
         QMessageBox::warning(this, "Failed", "Incorrect username or password.");

@@ -1,4 +1,5 @@
 /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/sqlConnection.dir
+/Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/CopyDatabase.dir
 /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/edit_cache.dir
 /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/rebuild_cache.dir
 /Users/cooperkeenan/Qt_Projects/sqlConnection/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/list_install_components.dir

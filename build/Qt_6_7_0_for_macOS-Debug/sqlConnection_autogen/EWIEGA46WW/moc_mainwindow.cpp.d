@@ -237,6 +237,7 @@
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/Headers/qtsqlglobal.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QMessageBox \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qdialog.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qdialogbuttonbox.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
@@ -246,4 +247,5 @@
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h \
-  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qwidget.h
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qwidget.h \
+  /Users/cooperkeenan/Qt_Projects/sqlConnection/dashboard.h
