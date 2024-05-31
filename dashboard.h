@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QGraphicsScene>
 #include <QResizeEvent>
+#include <QScrollArea>
+#include <QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class dashboard; }
@@ -23,6 +25,7 @@ protected:
 private:
     Ui::dashboard *ui;
     QGraphicsScene *scene;
+    QScrollArea *scrollArea;
 };
 
 #endif // DASHBOARD_H

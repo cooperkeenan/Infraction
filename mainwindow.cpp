@@ -30,29 +30,6 @@ MainWindow::~MainWindow()
 }
 
 
-//Attempt to connect to database
-void MainWindow::on_btn_connectDB_clicked()
-{
-    QSqlDatabase sqlitedb = QSqlDatabase::addDatabase("QSQLITE");
-    QString dbPath = QDir(QCoreApplication::applicationDirPath()).filePath("../Resources/db/InfractionDB.sqlite");
-    qDebug() << "Database path:" << dbPath;
-    sqlitedb.setDatabaseName(dbPath);
-
-    QFile dbFile(dbPath);
-    if (!dbFile.exists()) {
-        qDebug() << "Database file does not exist:" << dbPath;
-    } else {
-        qDebug() << "Database file found:" << dbPath;
-    }
-
-
-    if (!sqlitedb.open()) {
-        QMessageBox::information(this, "Not Connected", "Database Not Connected");
-    } else {
-        QMessageBox::information(this, "Connected", "Database is connected successfully");
-    }
-}
-
 
 //Continue to Sign in
 void MainWindow::on_btn_continue_clicked()
@@ -64,6 +41,18 @@ void MainWindow::on_btn_continue_clicked()
 //Sign in Function
 void MainWindow::on_loginButton_clicked()
 {
+    QSqlDatabase sqlitedb = QSqlDatabase::addDatabase("QSQLITE");
+    QString dbPath = QDir(QCoreApplication::applicationDirPath()).filePath("../Resources/db/InfractionDB.sqlite");
+    qDebug() << "Database path:" << dbPath;
+    sqlitedb.setDatabaseName(dbPath);
+
+    QFile dbFile(dbPath);
+    if (!sqlitedb.open()) {
+        qDebug() << "Database file does not exist:" << dbPath;
+    } else {
+        qDebug() << "Database file found:" << dbPath;
+    }
+
     QString username = ui->usernameLineEdit->text();
     QString password = ui->passwordLineEdit->text();
 
@@ -93,3 +82,9 @@ void MainWindow::on_loginButton_clicked()
         QMessageBox::warning(this, "Failed", "Incorrect username or password.");
     }
 }
+
+void MainWindow::on_btn_backDoor_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(dashboardWidget);
+}
+

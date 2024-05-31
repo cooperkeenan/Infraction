@@ -229,7 +229,7 @@ build sqlConnection.app/Contents/Resources/db/InfractionDB.sqlite | ${cmake_ninj
 #############################################
 # Phony custom command for CMakeFiles/sqlConnection_autogen_timestamp_deps
 
-build CMakeFiles/sqlConnection_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/sqlConnection_autogen_timestamp_deps: phony /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/moc /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/uic /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql
+build CMakeFiles/sqlConnection_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/sqlConnection_autogen_timestamp_deps: phony /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/uic /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore /Users/cooperkeenan/Qt/6.7.0/macos/./libexec/moc /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets
 
 
 #############################################

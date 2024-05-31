@@ -3,7 +3,7 @@
 #include <QGraphicsTextItem>
 #include <QGraphicsPixmapItem>
 #include <QDebug>
-#include <QFont>
+#include <QLabel>
 
 dashboard::dashboard(QWidget *parent) :
     QWidget(parent),
@@ -13,44 +13,40 @@ dashboard::dashboard(QWidget *parent) :
     ui->setupUi(this);
     ui->graphicsView->setScene(scene);
 
-    // Load and display the map image
     QPixmap mapPixmap(":/images/uk_map.png");
-    QPixmap scaledMap = mapPixmap.scaled(1600, 1300, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-    QGraphicsPixmapItem* mapItem = scene->addPixmap(scaledMap);
-    mapItem->setPos(0, 0);
+    if (!mapPixmap.isNull()) {
+        QPixmap scaledMap = mapPixmap.scaled(1600, 1300, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        QGraphicsPixmapItem* mapItem = scene->addPixmap(scaledMap);
+        mapItem->setPos(0, 0);
+        scene->setSceneRect(scaledMap.rect());
+        ui->graphicsView->fitInView(scene->sceneRect(), Qt::KeepAspectRatio);
+    }
 
-    // Set the initial scene rectangle
-    scene->setSceneRect(scaledMap.rect());
-    ui->graphicsView->fitInView(scene->sceneRect(), Qt::KeepAspectRatio);
+    QVBoxLayout* layout = static_cast<QVBoxLayout*>(ui->scrollAreaWidgetContents->layout());
+    QStringList infractions = {"Speeding", "Red light crossing", "Illegal parking", "Unbuckled seatbelt", "Speeding", "Red light crossing", "Illegal parking", "Unbuckled seatbelt", "Speeding", "Red light crossing", "Illegal parking", "Unbuckled seatbelt"};
+    foreach (const QString &infraction, infractions) {
+        QLabel* label = new QLabel(infraction, ui->scrollAreaWidgetContents);
+        layout->addWidget(label);
+    }
 
-    // Example depot data
     QList<QPair<QString, QPointF>> depots = {
-        {"London", QPointF(400, 400)},
-        {"Manchester", QPointF(400, 500)},
-        {"Birmingham", QPointF(400, 900)}
+        {"London", QPointF(400, 1100)},
+        {"Manchester", QPointF(290, 700)},
+        {"Birmingham", QPointF(300, 900)}
     };
 
-    // Add labels for each depot
-    for (const auto &depot : depots) {
+    foreach (const auto &depot, depots) {
         QGraphicsTextItem* label = scene->addText(depot.first);
         label->setPos(depot.second);
         label->setDefaultTextColor(Qt::white);
-
-        // Create and set the font for the label
         QFont labelFont = label->font();
-        labelFont.setPointSize(20);  // Set the font size to 12 points
-        labelFont.setBold(true);     // Optionally make the text bold
+        labelFont.setPointSize(20);
+        labelFont.setBold(true);
         label->setFont(labelFont);
     }
 
-    // Set the QGraphicsView properties
     ui->graphicsView->setRenderHint(QPainter::Antialiasing);
     ui->graphicsView->setBackgroundBrush(QBrush(QColor(48, 48, 48)));
-}
-
-dashboard::~dashboard()
-{
-    delete ui;
 }
 
 void dashboard::resizeEvent(QResizeEvent *event) {
@@ -60,4 +56,7 @@ void dashboard::resizeEvent(QResizeEvent *event) {
     }
 }
 
-
+dashboard::~dashboard()
+{
+    delete ui;
+}

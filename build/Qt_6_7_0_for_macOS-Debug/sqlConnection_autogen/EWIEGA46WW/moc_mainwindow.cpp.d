@@ -267,12 +267,21 @@
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsScene \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QMessageBox \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QScrollArea \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QVBoxLayout \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractscrollarea.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qboxlayout.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qdialog.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qdialogbuttonbox.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qgraphicsscene.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qgridlayout.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayout.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayoutitem.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qmessagebox.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qscrollarea.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtabwidget.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h \

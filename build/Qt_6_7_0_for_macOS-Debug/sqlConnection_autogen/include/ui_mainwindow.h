@@ -35,10 +35,13 @@ public:
     QGridLayout *gridLayout_3;
     QPushButton *btn_continue;
     QSpacerItem *verticalSpacer_3;
-    QPushButton *btn_connectDB;
     QSpacerItem *verticalSpacer;
+    QSpacerItem *horizontalSpacer_3;
+    QSpacerItem *horizontalSpacer_4;
     QSpacerItem *verticalSpacer_2;
-    QLabel *label;
+    QSpacerItem *horizontalSpacer_5;
+    QSpacerItem *horizontalSpacer_6;
+    QPushButton *btn_backDoor;
     QWidget *page_2;
     QGridLayout *gridLayout_5;
     QSpacerItem *horizontalSpacer;
@@ -102,54 +105,40 @@ public:
 "    background-color: #388E3C;  /* Darker green on press */\n"
 "}"));
 
-        gridLayout_3->addWidget(btn_continue, 4, 0, 1, 1);
+        gridLayout_3->addWidget(btn_continue, 2, 2, 1, 1);
 
         verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        gridLayout_3->addItem(verticalSpacer_3, 5, 0, 1, 1);
-
-        btn_connectDB = new QPushButton(page);
-        btn_connectDB->setObjectName("btn_connectDB");
-        sizePolicy.setHeightForWidth(btn_connectDB->sizePolicy().hasHeightForWidth());
-        btn_connectDB->setSizePolicy(sizePolicy);
-        btn_connectDB->setMaximumSize(QSize(150, 50));
-        btn_connectDB->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: #4CAF50;  /* Green background */\n"
-"    color: #FFFFFF;  /* White text */\n"
-"    border: 1px solid #3E8E41;  /* Slightly darker green border */\n"
-"    border-radius: 4px;  /* Rounded corners */\n"
-"    padding: 6px;  /* Padding */\n"
-"    text-align: center;\n"
-"    font-size: 14px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #45A049;  /* Lighter green on hover */\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #388E3C;  /* Darker green on press */\n"
-"}"));
-
-        gridLayout_3->addWidget(btn_connectDB, 2, 0, 1, 1);
+        gridLayout_3->addItem(verticalSpacer_3, 3, 2, 1, 1);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        gridLayout_3->addItem(verticalSpacer, 3, 0, 1, 1);
+        gridLayout_3->addItem(verticalSpacer, 1, 2, 1, 1);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_3->addItem(horizontalSpacer_3, 2, 0, 1, 1);
+
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_3->addItem(horizontalSpacer_4, 2, 4, 1, 1);
 
         verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        gridLayout_3->addItem(verticalSpacer_2, 0, 0, 1, 1);
+        gridLayout_3->addItem(verticalSpacer_2, 0, 2, 1, 1);
 
-        label = new QLabel(page);
-        label->setObjectName("label");
-        label->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"    color: #FFFFFF;  /* White text */\n"
-"    font-size: 14px;\n"
-"    font-weight: normal;\n"
-"}"));
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
-        gridLayout_3->addWidget(label, 1, 0, 1, 1);
+        gridLayout_3->addItem(horizontalSpacer_5, 0, 1, 1, 1);
+
+        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_3->addItem(horizontalSpacer_6, 0, 3, 1, 1);
+
+        btn_backDoor = new QPushButton(page);
+        btn_backDoor->setObjectName("btn_backDoor");
+
+        gridLayout_3->addWidget(btn_backDoor, 0, 0, 1, 1);
 
         stackedWidget->addWidget(page);
         page_2 = new QWidget();
@@ -295,8 +284,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         btn_continue->setText(QCoreApplication::translate("MainWindow", "Continue", nullptr));
-        btn_connectDB->setText(QCoreApplication::translate("MainWindow", "Test", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Database Connection", nullptr));
+        btn_backDoor->setText(QCoreApplication::translate("MainWindow", "Back Door", nullptr));
         lbl_username->setText(QCoreApplication::translate("MainWindow", "Username", nullptr));
         lbl_password->setText(QCoreApplication::translate("MainWindow", "Password", nullptr));
         loginButton->setText(QCoreApplication::translate("MainWindow", "Sign In", nullptr));

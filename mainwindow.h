@@ -23,9 +23,10 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_btn_connectDB_clicked();
     void on_btn_continue_clicked();  // Ensure this matches the implementation
     void on_loginButton_clicked();
+
+    void on_btn_backDoor_clicked();
 
 private:
     Ui::MainWindow *ui;
