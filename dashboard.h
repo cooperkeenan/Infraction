@@ -6,10 +6,18 @@
 #include <QResizeEvent>
 #include <QScrollArea>
 #include <QVBoxLayout>
+#include "incidentwidget.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class dashboard; }
 QT_END_NAMESPACE
+
+struct IncidentInfo {
+    QString driver;
+    QString incident;
+    QString date;
+    QString notes;
+};
 
 class dashboard : public QWidget
 {
@@ -25,7 +33,6 @@ protected:
 private:
     Ui::dashboard *ui;
     QGraphicsScene *scene;
-    QScrollArea *scrollArea;
 };
 
 #endif // DASHBOARD_H

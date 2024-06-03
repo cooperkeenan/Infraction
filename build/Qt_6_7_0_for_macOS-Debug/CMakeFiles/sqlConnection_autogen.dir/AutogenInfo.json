@@ -328,6 +328,18 @@
 			null
 		],
 		[
+			"/Users/cooperkeenan/Qt_Projects/sqlConnection/incidentwidget.h",
+			"MU",
+			"EWIEGA46WW/moc_incidentwidget.cpp",
+			null
+		],
+		[
+			"/Users/cooperkeenan/Qt_Projects/sqlConnection/infractionwidget.h",
+			"MU",
+			"EWIEGA46WW/moc_infractionwidget.cpp",
+			null
+		],
+		[
 			"/Users/cooperkeenan/Qt_Projects/sqlConnection/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -395,6 +407,16 @@
 	[
 		[
 			"/Users/cooperkeenan/Qt_Projects/sqlConnection/dashboard.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cooperkeenan/Qt_Projects/sqlConnection/incidentwidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cooperkeenan/Qt_Projects/sqlConnection/infractionwidget.cpp",
 			"MU",
 			null
 		],

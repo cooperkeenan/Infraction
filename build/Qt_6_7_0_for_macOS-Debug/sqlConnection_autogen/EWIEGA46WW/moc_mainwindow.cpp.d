@@ -219,6 +219,8 @@
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/QEnterEvent \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/QMouseEvent \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/QResizeEvent \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/QTransform \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qaction.h \
@@ -241,6 +243,7 @@
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qpaintdevice.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qpalette.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qpen.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qpicture.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qpixelformat.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qpixmap.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qpointingdevice.h \
@@ -250,6 +253,7 @@
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qrgba64.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qscreen.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qscreen_platform.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qtextdocument.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qtgui-config.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h \
@@ -264,7 +268,9 @@
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/Headers/qtsql-config.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/Headers/qtsqlexports.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/Headers/qtsqlglobal.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QFrame \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsScene \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QLabel \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QMessageBox \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QScrollArea \
@@ -277,6 +283,7 @@
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qgraphicsscene.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qgridlayout.h \
+  /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlabel.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayout.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayoutitem.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
@@ -288,4 +295,5 @@
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h \
   /Users/cooperkeenan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qwidget.h \
-  /Users/cooperkeenan/Qt_Projects/sqlConnection/dashboard.h
+  /Users/cooperkeenan/Qt_Projects/sqlConnection/dashboard.h \
+  /Users/cooperkeenan/Qt_Projects/sqlConnection/incidentwidget.h

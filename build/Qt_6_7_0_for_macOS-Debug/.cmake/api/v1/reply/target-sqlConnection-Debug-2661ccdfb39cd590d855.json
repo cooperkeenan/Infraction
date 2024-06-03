@@ -70,13 +70,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 57,
+				"line" : 59,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 42,
+				"line" : 44,
 				"parent" : 0
 			},
 			{
@@ -204,7 +204,7 @@
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 82,
+				"line" : 84,
 				"parent" : 0
 			}
 		]
@@ -313,22 +313,24 @@
 				1,
 				2,
 				6,
-				14
+				12,
+				14,
+				18
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
+			"backtrace" : 0,
+			"id" : "sqlConnection_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
 			"id" : "sqlConnection_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 30,
 			"id" : "CopyDatabase::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "sqlConnection_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "sqlConnection::@6890427a1f51a3e7e1df",
@@ -439,7 +441,9 @@
 				1,
 				2,
 				6,
-				14
+				12,
+				14,
+				18
 			]
 		},
 		{
@@ -449,7 +453,9 @@
 				3,
 				5,
 				11,
-				12
+				13,
+				15,
+				16
 			]
 		},
 		{
@@ -460,7 +466,7 @@
 				7,
 				8,
 				10,
-				13
+				17
 			]
 		},
 		{
@@ -474,8 +480,8 @@
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				15,
-				16
+				19,
+				20
 			]
 		}
 	],
@@ -540,6 +546,28 @@
 			"backtrace" : 4,
 			"path" : "resources.qrc",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "incidentwidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "incidentwidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "infractionwidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "infractionwidget.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,

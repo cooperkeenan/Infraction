@@ -30,6 +30,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         uk_map.png
         uk_map.png
         resources.qrc
+        incidentwidget.h incidentwidget.cpp
+        infractionwidget.h infractionwidget.cpp
     )
 else()
     if(ANDROID)

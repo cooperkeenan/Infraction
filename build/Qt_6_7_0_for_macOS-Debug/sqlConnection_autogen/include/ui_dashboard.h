@@ -28,14 +28,14 @@ public:
     QStackedWidget *stackedWidget;
     QWidget *page;
     QGridLayout *gridLayout;
-    QSpacerItem *horizontalSpacer_2;
-    QSpacerItem *verticalSpacer_2;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
     QVBoxLayout *verticalLayout_2;
     QWidget *widget;
-    QGraphicsView *graphicsView;
+    QSpacerItem *horizontalSpacer_2;
     QSpacerItem *verticalSpacer;
+    QGraphicsView *graphicsView;
+    QSpacerItem *verticalSpacer_2;
     QWidget *page_2;
 
     void setupUi(QWidget *dashboard)
@@ -59,14 +59,6 @@ public:
         page->setObjectName("page");
         gridLayout = new QGridLayout(page);
         gridLayout->setObjectName("gridLayout");
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer_2, 1, 4, 1, 1);
-
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        gridLayout->addItem(verticalSpacer_2, 0, 2, 1, 1);
-
         scrollArea = new QScrollArea(page);
         scrollArea->setObjectName("scrollArea");
         QSizePolicy sizePolicy1(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
@@ -74,13 +66,14 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(scrollArea->sizePolicy().hasHeightForWidth());
         scrollArea->setSizePolicy(sizePolicy1);
-        scrollArea->setMaximumSize(QSize(1000, 250));
+        scrollArea->setMaximumSize(QSize(16000, 16000));
+        scrollArea->setStyleSheet(QString::fromUtf8(""));
         scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
         scrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 439, 248));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 439, 257));
         sizePolicy1.setHeightForWidth(scrollAreaWidgetContents->sizePolicy().hasHeightForWidth());
         scrollAreaWidgetContents->setSizePolicy(sizePolicy1);
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
@@ -96,14 +89,22 @@ public:
 
         gridLayout->addWidget(scrollArea, 3, 4, 1, 1);
 
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_2, 1, 4, 1, 1);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        gridLayout->addItem(verticalSpacer, 3, 2, 1, 1);
+
         graphicsView = new QGraphicsView(page);
         graphicsView->setObjectName("graphicsView");
 
         gridLayout->addWidget(graphicsView, 0, 1, 4, 1);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        gridLayout->addItem(verticalSpacer, 3, 2, 1, 1);
+        gridLayout->addItem(verticalSpacer_2, 0, 2, 1, 1);
 
         stackedWidget->addWidget(page);
         page_2 = new QWidget();

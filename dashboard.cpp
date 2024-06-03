@@ -1,9 +1,10 @@
 #include "dashboard.h"
 #include "ui_dashboard.h"
+#include "incidentwidget.h"  // Ensure this is included
 #include <QGraphicsTextItem>
 #include <QGraphicsPixmapItem>
 #include <QDebug>
-#include <QLabel>
+#include <QVBoxLayout>
 
 dashboard::dashboard(QWidget *parent) :
     QWidget(parent),
@@ -22,12 +23,24 @@ dashboard::dashboard(QWidget *parent) :
         ui->graphicsView->fitInView(scene->sceneRect(), Qt::KeepAspectRatio);
     }
 
+    // Assuming QVBoxLayout is properly setup in your UI Designer
     QVBoxLayout* layout = static_cast<QVBoxLayout*>(ui->scrollAreaWidgetContents->layout());
-    QStringList infractions = {"Speeding", "Red light crossing", "Illegal parking", "Unbuckled seatbelt", "Speeding", "Red light crossing", "Illegal parking", "Unbuckled seatbelt", "Speeding", "Red light crossing", "Illegal parking", "Unbuckled seatbelt"};
-    foreach (const QString &infraction, infractions) {
-        QLabel* label = new QLabel(infraction, ui->scrollAreaWidgetContents);
-        layout->addWidget(label);
+    if (!layout) {
+        layout = new QVBoxLayout(ui->scrollAreaWidgetContents);
     }
+
+    // Example data in dashboard.cpp where IncidentInfo is used
+    QList<IncidentInfo> incidents = {
+        {"John Doe", "Speeding", "2024-05-31", "Exceeded speed limit by 15 mph in a residential zone."},
+        {"Jane Smith", "Red light crossing", "2024-05-30", "Crossed intersection during red light at Main St."},
+        {"Jim Beam", "Illegal parking", "2024-05-29", "Parked in a no-parking zone outside of shopping mall."}
+    };
+
+    foreach (const IncidentInfo &incident, incidents) {
+        IncidentWidget* widget = new IncidentWidget(incident.driver, incident.incident, incident.date, incident.notes, this);
+        layout->addWidget(widget);
+    }
+
 
     QList<QPair<QString, QPointF>> depots = {
         {"London", QPointF(400, 1100)},
