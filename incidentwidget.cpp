@@ -50,6 +50,7 @@ IncidentWidget::IncidentWidget(const QString& driver, const QString& incident, c
     layout->addWidget(notesLabel);
 
     setLayout(layout);
+    updateStyleSheet();
 
 
     // Apply drop shadow effect

@@ -1,16 +1,15 @@
-// infractionwidget.h
 #ifndef INFRACTIONWIDGET_H
 #define INFRACTIONWIDGET_H
 
 #include <QWidget>
+#include <QFrame>
 
-class InfractionWidget : public QWidget
-{
+class InfractionWidget : public QFrame {
     Q_OBJECT
     Q_PROPERTY(int infractions READ getInfractions WRITE setInfractions NOTIFY infractionsChanged)
 
 public:
-    explicit InfractionWidget(QWidget *parent = nullptr);
+    explicit InfractionWidget(const QString& label, QWidget *parent = nullptr);
     int getInfractions() const;
     void setInfractions(int newInfractions);
 
@@ -22,6 +21,9 @@ signals:
 
 private:
     int infractions;
+    QString m_label;
+
+    void setupUI();
 };
 
 #endif // INFRACTIONWIDGET_H

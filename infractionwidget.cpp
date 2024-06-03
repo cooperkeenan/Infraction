@@ -1,21 +1,41 @@
-// infractionwidget.cpp
 #include "infractionwidget.h"
 #include <QPainter>
-#include <QPaintEvent>
+#include <QVBoxLayout>
+#include <QLabel>
+#include <QGraphicsDropShadowEffect>
 
-InfractionWidget::InfractionWidget(QWidget *parent) : QWidget(parent), infractions(0)
-{
-    // Set the size of the widget
+InfractionWidget::InfractionWidget(const QString& label, QWidget *parent) : QFrame(parent), infractions(0), m_label(label) {
     setMinimumSize(200, 200);
+    setFrameStyle(QFrame::StyledPanel | QFrame::Plain);
+    setStyleSheet("background-color: #2A2E35; border-radius: 10px;");
+
+    QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect(this);
+    shadowEffect->setBlurRadius(20);
+    shadowEffect->setXOffset(5);
+    shadowEffect->setYOffset(5);
+    shadowEffect->setColor(QColor(0, 0, 0, 150));
+    setGraphicsEffect(shadowEffect);
+
+    setupUI();
 }
 
-int InfractionWidget::getInfractions() const
-{
+void InfractionWidget::setupUI() {
+    QVBoxLayout *layout = new QVBoxLayout(this);
+
+    // Specific label for this widget
+    QLabel *labelWidget = new QLabel(m_label, this);
+    labelWidget->setAlignment(Qt::AlignCenter);
+    labelWidget->setStyleSheet("font-size: 16px; color: white;");
+    layout->addWidget(labelWidget, 0, Qt::AlignBottom);
+
+    setLayout(layout);
+}
+
+int InfractionWidget::getInfractions() const {
     return infractions;
 }
 
-void InfractionWidget::setInfractions(int newInfractions)
-{
+void InfractionWidget::setInfractions(int newInfractions) {
     if (infractions == newInfractions)
         return;
     infractions = newInfractions;
@@ -24,11 +44,13 @@ void InfractionWidget::setInfractions(int newInfractions)
 }
 
 void InfractionWidget::paintEvent(QPaintEvent *event) {
+    QFrame::paintEvent(event);
+
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing);
 
     // Background
-    painter.fillRect(rect(), QColor("#303030"));  // Set to the same grey as your interface
+    painter.fillRect(rect(), QColor("#2A2E35"));  // Set to the same grey as your interface
 
     // Draw the ring
     QPen pen(QColor("#FF0000"), 10, Qt::SolidLine, Qt::FlatCap);  // Set pen width to 10 for the ring
@@ -37,12 +59,14 @@ void InfractionWidget::paintEvent(QPaintEvent *event) {
 
     // Calculate the radius based on widget size
     int radius = qMin(width(), height()) / 4;
-    QPoint center(width() / 2, height() / 2);
-    painter.drawEllipse(center, radius, radius);
+    QPoint center(width() / 2, height() / 2 - 10);
+    QRectF circleRect(center.x() - radius, center.y() - radius, 2 * radius, 2 * radius);
+
+    // Draw the full circle for count representation
+    painter.drawEllipse(circleRect);
 
     // Draw the infraction count text
     painter.setPen(Qt::white);
     painter.setFont(QFont("Arial", 24, QFont::Bold));
-    painter.drawText(rect(), Qt::AlignCenter, QString::number(infractions));  // Corrected from m_infractions to infractions
+    painter.drawText(circleRect, Qt::AlignCenter, QString::number(infractions));
 }
-
