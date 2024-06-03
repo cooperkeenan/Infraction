@@ -1,8 +1,11 @@
 #include "dashboard.h"
 #include "ui_dashboard.h"
-#include "incidentwidget.h"  // Ensure this is included
+#include "incidentwidget.h"
+#include "infractionwidget.h"
+
 #include <QGraphicsTextItem>
 #include <QGraphicsPixmapItem>
+#include <QGraphicsDropShadowEffect>
 #include <QDebug>
 #include <QVBoxLayout>
 
@@ -14,6 +17,31 @@ dashboard::dashboard(QWidget *parent) :
     ui->setupUi(this);
     ui->graphicsView->setScene(scene);
 
+
+    //Set up infraction counter container
+    QWidget *containerWidget = ui->widgetContainer;
+    if (containerWidget) {
+        QVBoxLayout *layout = qobject_cast<QVBoxLayout*>(containerWidget->layout());
+
+        InfractionWidget* infractionDisplay = new InfractionWidget(this);
+        infractionDisplay->setInfractions(32);  // Example setting an initial value
+
+        // Setup the shadow effect
+        QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect(infractionDisplay);
+        shadowEffect->setBlurRadius(15);
+        shadowEffect->setXOffset(5);
+        shadowEffect->setYOffset(5);
+        shadowEffect->setColor(QColor(0, 0, 0, 150));
+        infractionDisplay->setGraphicsEffect(shadowEffect);
+
+        layout->addWidget(infractionDisplay);
+
+    } else {
+        qDebug() << "widgetContainer not found!";
+    }
+
+
+    //Setup up map graphics view
     QPixmap mapPixmap(":/images/uk_map.png");
     if (!mapPixmap.isNull()) {
         QPixmap scaledMap = mapPixmap.scaled(1600, 1300, Qt::KeepAspectRatio, Qt::SmoothTransformation);

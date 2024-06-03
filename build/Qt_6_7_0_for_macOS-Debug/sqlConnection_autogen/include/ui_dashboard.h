@@ -28,14 +28,17 @@ public:
     QStackedWidget *stackedWidget;
     QWidget *page;
     QGridLayout *gridLayout;
+    QSpacerItem *horizontalSpacer_2;
+    QGraphicsView *graphicsView;
+    QSpacerItem *verticalSpacer_2;
+    QSpacerItem *verticalSpacer;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
     QVBoxLayout *verticalLayout_2;
     QWidget *widget;
-    QSpacerItem *horizontalSpacer_2;
-    QSpacerItem *verticalSpacer;
-    QGraphicsView *graphicsView;
-    QSpacerItem *verticalSpacer_2;
+    QWidget *widgetContainer;
+    QVBoxLayout *verticalLayout_4;
+    QVBoxLayout *verticalLayout_3;
     QWidget *page_2;
 
     void setupUi(QWidget *dashboard)
@@ -59,6 +62,23 @@ public:
         page->setObjectName("page");
         gridLayout = new QGridLayout(page);
         gridLayout->setObjectName("gridLayout");
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_2, 1, 4, 1, 1);
+
+        graphicsView = new QGraphicsView(page);
+        graphicsView->setObjectName("graphicsView");
+
+        gridLayout->addWidget(graphicsView, 0, 1, 4, 1);
+
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        gridLayout->addItem(verticalSpacer_2, 0, 2, 1, 1);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        gridLayout->addItem(verticalSpacer, 3, 2, 1, 1);
+
         scrollArea = new QScrollArea(page);
         scrollArea->setObjectName("scrollArea");
         QSizePolicy sizePolicy1(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
@@ -89,22 +109,17 @@ public:
 
         gridLayout->addWidget(scrollArea, 3, 4, 1, 1);
 
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        widgetContainer = new QWidget(page);
+        widgetContainer->setObjectName("widgetContainer");
+        verticalLayout_4 = new QVBoxLayout(widgetContainer);
+        verticalLayout_4->setObjectName("verticalLayout_4");
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName("verticalLayout_3");
 
-        gridLayout->addItem(horizontalSpacer_2, 1, 4, 1, 1);
+        verticalLayout_4->addLayout(verticalLayout_3);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        gridLayout->addItem(verticalSpacer, 3, 2, 1, 1);
-
-        graphicsView = new QGraphicsView(page);
-        graphicsView->setObjectName("graphicsView");
-
-        gridLayout->addWidget(graphicsView, 0, 1, 4, 1);
-
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        gridLayout->addItem(verticalSpacer_2, 0, 2, 1, 1);
+        gridLayout->addWidget(widgetContainer, 0, 4, 1, 1);
 
         stackedWidget->addWidget(page);
         page_2 = new QWidget();
