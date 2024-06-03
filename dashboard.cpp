@@ -18,6 +18,15 @@ dashboard::dashboard(QWidget *parent) :
     ui->setupUi(this);
     ui->graphicsView->setScene(scene);
 
+    // Set background color and shadow effect for graphicsView
+    ui->graphicsView->setStyleSheet("background-color: #2A2E35; border-radius: 10px;");
+    QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect(ui->graphicsView);
+    shadowEffect->setBlurRadius(20);
+    shadowEffect->setXOffset(5);
+    shadowEffect->setYOffset(5);
+    shadowEffect->setColor(QColor(0, 0, 0, 150));
+    ui->graphicsView->setGraphicsEffect(shadowEffect);
+
     // Container widget for all infraction display components
     QWidget *containerWidget = new QWidget();
     QVBoxLayout *containerLayout = new QVBoxLayout(containerWidget);
@@ -57,6 +66,35 @@ dashboard::dashboard(QWidget *parent) :
         ui->graphicsView->fitInView(scene->sceneRect(), Qt::KeepAspectRatio);
     }
 
+    // Add city labels with infraction counts
+    QList<QPair<QString, QPointF>> depots = {
+        {"London", QPointF(400, 1100)},
+        {"Manchester", QPointF(400, 700)},
+        {"Birmingham", QPointF(300, 900)}
+    };
+
+    QList<int> infractionCounts = {12, 15, 8};  // Example infraction counts for each depot
+
+    for (int i = 0; i < depots.size(); ++i) {
+        const auto &depot = depots[i];
+        QGraphicsTextItem* label = scene->addText(depot.first);
+        label->setPos(depot.second);
+        label->setDefaultTextColor(Qt::white);
+        QFont labelFont = label->font();
+        labelFont.setPointSize(20);
+        labelFont.setBold(true);
+        label->setFont(labelFont);
+
+        // Add infraction count label
+        QGraphicsTextItem* infractionLabel = scene->addText(QString::number(infractionCounts[i]));
+        infractionLabel->setPos(depot.second + QPointF(50, 20));  // Adjust position as needed
+        infractionLabel->setDefaultTextColor(Qt::red);
+        QFont infractionFont = infractionLabel->font();
+        infractionFont.setPointSize(20);
+        infractionFont.setBold(true);
+        infractionLabel->setFont(infractionFont);
+    }
+
     // Setup the incidents area
     QVBoxLayout* incidentsLayout = static_cast<QVBoxLayout*>(ui->scrollAreaWidgetContents->layout());
     if (!incidentsLayout) {
@@ -75,7 +113,7 @@ dashboard::dashboard(QWidget *parent) :
     }
 
     ui->graphicsView->setRenderHint(QPainter::Antialiasing);
-    ui->graphicsView->setBackgroundBrush(QBrush(QColor(48, 48, 48)));
+    ui->graphicsView->setBackgroundBrush(QBrush(QColor(42, 46, 53)));
 }
 
 void dashboard::resizeEvent(QResizeEvent *event) {
