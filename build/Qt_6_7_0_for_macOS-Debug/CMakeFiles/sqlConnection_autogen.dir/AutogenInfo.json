@@ -340,6 +340,12 @@
 			null
 		],
 		[
+			"/Users/cooperkeenan/Qt_Projects/sqlConnection/linechartwidget.h",
+			"MU",
+			"EWIEGA46WW/moc_linechartwidget.cpp",
+			null
+		],
+		[
 			"/Users/cooperkeenan/Qt_Projects/sqlConnection/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -417,6 +423,11 @@
 		],
 		[
 			"/Users/cooperkeenan/Qt_Projects/sqlConnection/infractionwidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cooperkeenan/Qt_Projects/sqlConnection/linechartwidget.cpp",
 			"MU",
 			null
 		],

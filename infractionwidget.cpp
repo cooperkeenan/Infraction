@@ -25,7 +25,7 @@ void InfractionWidget::setupUI() {
     // Specific label for this widget
     QLabel *labelWidget = new QLabel(m_label, this);
     labelWidget->setAlignment(Qt::AlignCenter);
-    labelWidget->setStyleSheet("font-size: 16px; color: white;");
+    labelWidget->setStyleSheet("font-size: 16px; color: white; background-color: #1E232B;");
     layout->addWidget(labelWidget, 0, Qt::AlignBottom);
 
     setLayout(layout);
@@ -50,10 +50,10 @@ void InfractionWidget::paintEvent(QPaintEvent *event) {
     painter.setRenderHint(QPainter::Antialiasing);
 
     // Background
-    painter.fillRect(rect(), QColor("#2A2E35"));  // Set to the same grey as your interface
+    painter.fillRect(rect(), QColor("#1E232B"));  // Set to the same grey as your interface
 
     // Draw the ring
-    QPen pen(QColor("#FF0000"), 10, Qt::SolidLine, Qt::FlatCap);  // Set pen width to 10 for the ring
+    QPen pen(QColor("#0072C0"), 10, Qt::SolidLine, Qt::FlatCap);  // Set pen width to 10 for the ring
     painter.setPen(pen);
     painter.setBrush(Qt::NoBrush);  // Ensure it's only an outline
 

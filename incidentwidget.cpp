@@ -13,7 +13,7 @@ void IncidentWidget::updateStyleSheet()
                         " color: #EEE;"            // Light text for contrast
                         " box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);"  // Subtle shadow for depth
                         "}";
-    QString bgColor = isHovered ? "#313745" : "#2A2F3A";  // Slightly lighter on hover
+    QString bgColor = isHovered ? "#313745" : "#1E232B";  // Slightly lighter on hover
     setStyleSheet(baseStyle.arg(bgColor));
 }
 

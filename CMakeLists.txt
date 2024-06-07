@@ -32,6 +32,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         resources.qrc
         incidentwidget.h incidentwidget.cpp
         infractionwidget.h infractionwidget.cpp
+        linechartwidget.h linechartwidget.cpp
     )
 else()
     if(ANDROID)

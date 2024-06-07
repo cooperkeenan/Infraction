@@ -30,6 +30,9 @@ public:
 protected:
     void resizeEvent(QResizeEvent *event) override;
 
+private slots:
+    void on_lineEdit_cursorPositionChanged(int arg1, int arg2);
+
 private:
     Ui::dashboard *ui;
     QGraphicsScene *scene;

@@ -19,7 +19,7 @@ dashboard::dashboard(QWidget *parent) :
     ui->graphicsView->setScene(scene);
 
     // Set background color and shadow effect for graphicsView
-    ui->graphicsView->setStyleSheet("background-color: #2A2E35; border-radius: 10px;");
+    ui->graphicsView->setStyleSheet("background-color: #1E232B; border-radius: 10px;");
     QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect(ui->graphicsView);
     shadowEffect->setBlurRadius(20);
     shadowEffect->setXOffset(5);
@@ -36,6 +36,11 @@ dashboard::dashboard(QWidget *parent) :
     titleLabel->setAlignment(Qt::AlignLeft);
     titleLabel->setStyleSheet("font-size: 24px; color: white; margin-top: 10px; margin-bottom: 5px;");
     containerLayout->addWidget(titleLabel, 0, Qt::AlignLeft);
+
+
+    //Setup Search Bar
+    ui->lbl_searchDriver->setPlaceholderText("Search Driver");
+
 
     // Horizontal layout for infraction widgets
     QHBoxLayout *hLayout = new QHBoxLayout();
@@ -113,7 +118,8 @@ dashboard::dashboard(QWidget *parent) :
     }
 
     ui->graphicsView->setRenderHint(QPainter::Antialiasing);
-    ui->graphicsView->setBackgroundBrush(QBrush(QColor(42, 46, 53)));
+    ui->graphicsView->setBackgroundBrush(QBrush(QColor(30, 35, 43)));
+
 }
 
 void dashboard::resizeEvent(QResizeEvent *event) {
@@ -127,3 +133,9 @@ dashboard::~dashboard()
 {
     delete ui;
 }
+
+void dashboard::on_lineEdit_cursorPositionChanged(int arg1, int arg2)
+{
+
+}
+

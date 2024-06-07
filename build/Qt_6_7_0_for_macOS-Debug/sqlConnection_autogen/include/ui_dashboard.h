@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStackedWidget>
@@ -28,24 +29,26 @@ public:
     QStackedWidget *stackedWidget;
     QWidget *page;
     QGridLayout *gridLayout;
+    QWidget *widgetContainer;
+    QVBoxLayout *verticalLayout_4;
+    QLineEdit *lbl_searchDriver;
+    QSpacerItem *verticalSpacer_3;
+    QVBoxLayout *verticalLayout_3;
     QSpacerItem *horizontalSpacer_2;
     QGraphicsView *graphicsView;
-    QSpacerItem *verticalSpacer_2;
-    QSpacerItem *verticalSpacer;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
     QVBoxLayout *verticalLayout_2;
     QWidget *widget;
-    QWidget *widgetContainer;
-    QVBoxLayout *verticalLayout_4;
-    QVBoxLayout *verticalLayout_3;
+    QSpacerItem *verticalSpacer_2;
+    QSpacerItem *verticalSpacer;
     QWidget *page_2;
 
     void setupUi(QWidget *dashboard)
     {
         if (dashboard->objectName().isEmpty())
             dashboard->setObjectName("dashboard");
-        dashboard->resize(1003, 617);
+        dashboard->resize(1036, 729);
         QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
         sizePolicy.setHorizontalStretch(1);
         sizePolicy.setVerticalStretch(1);
@@ -57,11 +60,44 @@ public:
         stackedWidget->setObjectName("stackedWidget");
         sizePolicy.setHeightForWidth(stackedWidget->sizePolicy().hasHeightForWidth());
         stackedWidget->setSizePolicy(sizePolicy);
-        stackedWidget->setStyleSheet(QString::fromUtf8("background-color: #303030;"));
+        stackedWidget->setStyleSheet(QString::fromUtf8("\n"
+"background-color: rgb(41, 41, 41);"));
         page = new QWidget();
         page->setObjectName("page");
         gridLayout = new QGridLayout(page);
         gridLayout->setObjectName("gridLayout");
+        widgetContainer = new QWidget(page);
+        widgetContainer->setObjectName("widgetContainer");
+        verticalLayout_4 = new QVBoxLayout(widgetContainer);
+        verticalLayout_4->setObjectName("verticalLayout_4");
+        lbl_searchDriver = new QLineEdit(widgetContainer);
+        lbl_searchDriver->setObjectName("lbl_searchDriver");
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(lbl_searchDriver->sizePolicy().hasHeightForWidth());
+        lbl_searchDriver->setSizePolicy(sizePolicy1);
+        lbl_searchDriver->setMaximumSize(QSize(1000, 40));
+        QFont font;
+        font.setPointSize(24);
+        font.setBold(false);
+        lbl_searchDriver->setFont(font);
+        lbl_searchDriver->setCursor(QCursor(Qt::IBeamCursor));
+
+        verticalLayout_4->addWidget(lbl_searchDriver);
+
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        verticalLayout_4->addItem(verticalSpacer_3);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName("verticalLayout_3");
+
+        verticalLayout_4->addLayout(verticalLayout_3);
+
+
+        gridLayout->addWidget(widgetContainer, 0, 4, 1, 1);
+
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         gridLayout->addItem(horizontalSpacer_2, 1, 4, 1, 1);
@@ -71,19 +107,8 @@ public:
 
         gridLayout->addWidget(graphicsView, 0, 1, 4, 1);
 
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        gridLayout->addItem(verticalSpacer_2, 0, 2, 1, 1);
-
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        gridLayout->addItem(verticalSpacer, 3, 2, 1, 1);
-
         scrollArea = new QScrollArea(page);
         scrollArea->setObjectName("scrollArea");
-        QSizePolicy sizePolicy1(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(scrollArea->sizePolicy().hasHeightForWidth());
         scrollArea->setSizePolicy(sizePolicy1);
         scrollArea->setMaximumSize(QSize(16000, 16000));
@@ -93,7 +118,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 439, 257));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 456, 313));
         sizePolicy1.setHeightForWidth(scrollAreaWidgetContents->sizePolicy().hasHeightForWidth());
         scrollAreaWidgetContents->setSizePolicy(sizePolicy1);
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
@@ -109,17 +134,13 @@ public:
 
         gridLayout->addWidget(scrollArea, 3, 4, 1, 1);
 
-        widgetContainer = new QWidget(page);
-        widgetContainer->setObjectName("widgetContainer");
-        verticalLayout_4 = new QVBoxLayout(widgetContainer);
-        verticalLayout_4->setObjectName("verticalLayout_4");
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName("verticalLayout_3");
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        verticalLayout_4->addLayout(verticalLayout_3);
+        gridLayout->addItem(verticalSpacer_2, 0, 2, 1, 1);
 
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        gridLayout->addWidget(widgetContainer, 0, 4, 1, 1);
+        gridLayout->addItem(verticalSpacer, 3, 2, 1, 1);
 
         stackedWidget->addWidget(page);
         page_2 = new QWidget();
@@ -137,6 +158,7 @@ public:
     void retranslateUi(QWidget *dashboard)
     {
         dashboard->setWindowTitle(QCoreApplication::translate("dashboard", "Form", nullptr));
+        lbl_searchDriver->setText(QString());
     } // retranslateUi
 
 };
