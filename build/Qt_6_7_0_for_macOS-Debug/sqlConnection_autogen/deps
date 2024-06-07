@@ -91,6 +91,7 @@ sqlConnection_autogen/timestamp: \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/QRect \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/QSize \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/QSizeF \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/QVector \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/q20memory.h \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/q20type_traits.h \
@@ -215,6 +216,7 @@ sqlConnection_autogen/timestamp: \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qvariant.h \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qvector.h \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h \
@@ -318,6 +320,14 @@ sqlConnection_autogen/timestamp: \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6/QtPublicToolHelpers.cmake \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6/macos/Info.plist.app.in \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Charts/Qt6ChartsAdditionalTargetInfo.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Charts/Qt6ChartsConfig.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Charts/Qt6ChartsConfigVersion.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Charts/Qt6ChartsConfigVersionImpl.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Charts/Qt6ChartsDependencies.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Charts/Qt6ChartsTargets-relwithdebinfo.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Charts/Qt6ChartsTargets.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Charts/Qt6ChartsVersionlessTargets.cmake \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Core/Qt6CoreConfig.cmake \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake \
@@ -438,6 +448,22 @@ sqlConnection_autogen/timestamp: \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLAdditionalTargetInfo.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLConfig.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLConfigVersion.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLConfigVersionImpl.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLDependencies.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLTargets-relwithdebinfo.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLTargets.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLVersionlessTargets.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsAdditionalTargetInfo.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfig.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfigVersion.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfigVersionImpl.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsDependencies.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsTargets-relwithdebinfo.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsTargets.cmake \
+	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsVersionlessTargets.cmake \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginAdditionalTargetInfo.cmake \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginConfig.cmake \
 	/Users/cooperkeenan/Qt/6.7.0/macos/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets-relwithdebinfo.cmake \
@@ -528,6 +554,8 @@ sqlConnection_autogen/timestamp: \
 	/Users/cooperkeenan/Qt_Projects/sqlConnection/incidentwidget.h \
 	/Users/cooperkeenan/Qt_Projects/sqlConnection/infractionwidget.cpp \
 	/Users/cooperkeenan/Qt_Projects/sqlConnection/infractionwidget.h \
+	/Users/cooperkeenan/Qt_Projects/sqlConnection/linechartwidget.cpp \
+	/Users/cooperkeenan/Qt_Projects/sqlConnection/linechartwidget.h \
 	/Users/cooperkeenan/Qt_Projects/sqlConnection/main.cpp \
 	/Users/cooperkeenan/Qt_Projects/sqlConnection/mainwindow.cpp \
 	/Users/cooperkeenan/Qt_Projects/sqlConnection/mainwindow.h \

@@ -2,6 +2,7 @@
 #include "ui_dashboard.h"
 #include "incidentwidget.h"
 #include "infractionwidget.h"
+#include "linechartwidget.h"
 
 #include <QGraphicsTextItem>
 #include <QGraphicsPixmapItem>
@@ -37,10 +38,8 @@ dashboard::dashboard(QWidget *parent) :
     titleLabel->setStyleSheet("font-size: 24px; color: white; margin-top: 10px; margin-bottom: 5px;");
     containerLayout->addWidget(titleLabel, 0, Qt::AlignLeft);
 
-
-    //Setup Search Bar
+    // Setup Search Bar
     ui->lbl_searchDriver->setPlaceholderText("Search Driver");
-
 
     // Horizontal layout for infraction widgets
     QHBoxLayout *hLayout = new QHBoxLayout();
@@ -120,6 +119,13 @@ dashboard::dashboard(QWidget *parent) :
     ui->graphicsView->setRenderHint(QPainter::Antialiasing);
     ui->graphicsView->setBackgroundBrush(QBrush(QColor(30, 35, 43)));
 
+    // Add Line Chart Widget to the layout
+    LineChartWidget *lineChart = new LineChartWidget(this);
+    lineChart->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+    lineChart->setFixedHeight(200); // Adjust the height as needed
+    QVector<int> monthlyData = {12, 15, 8, 7, 10, 20, 30, 25, 18, 22, 5, 13}; // Example data
+    lineChart->setMonthlyData(monthlyData);
+    gridLayout->addWidget(lineChart, 2, 4, 1, 2, Qt::AlignTop); // Position the line chart in the grid layout
 }
 
 void dashboard::resizeEvent(QResizeEvent *event) {
@@ -136,6 +142,4 @@ dashboard::~dashboard()
 
 void dashboard::on_lineEdit_cursorPositionChanged(int arg1, int arg2)
 {
-
 }
-

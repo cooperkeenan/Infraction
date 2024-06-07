@@ -9,8 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets Sql REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets Sql REQUIRED)
+find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets Sql Charts REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets Sql Charts REQUIRED)
 
 set(PROJECT_SOURCES
     main.cpp
@@ -20,6 +20,12 @@ set(PROJECT_SOURCES
     dashboard.h
     dashboard.cpp
     dashboard.ui
+    incidentwidget.h
+    incidentwidget.cpp
+    infractionwidget.h
+    infractionwidget.cpp
+    linechartwidget.h
+    linechartwidget.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -28,11 +34,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         db/InfractionDB.sqlite
         uk_map.png
-        uk_map.png
         resources.qrc
-        incidentwidget.h incidentwidget.cpp
-        infractionwidget.h infractionwidget.cpp
-        linechartwidget.h linechartwidget.cpp
     )
 else()
     if(ANDROID)
@@ -42,7 +44,7 @@ else()
     endif()
 endif()
 
-target_link_libraries(sqlConnection PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Sql)
+target_link_libraries(sqlConnection PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Sql Qt${QT_VERSION_MAJOR}::Charts)
 
 if(${QT_VERSION} VERSION_LESS 6.1.0)
   set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.sqlConnection)
@@ -83,5 +85,3 @@ add_custom_command(
 
 add_custom_target(CopyDatabase ALL DEPENDS ${DB_DESTINATION})
 add_dependencies(sqlConnection CopyDatabase)
-
-

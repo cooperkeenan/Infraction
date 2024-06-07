@@ -1,10 +1,22 @@
 #ifndef LINECHARTWIDGET_H
 #define LINECHARTWIDGET_H
 
-class linechartwidget
-{
+#include <QWidget>
+#include <QVector>
+
+class LineChartWidget : public QWidget {
+    Q_OBJECT
+
 public:
-    linechartwidget();
+    explicit LineChartWidget(QWidget *parent = nullptr);
+
+    void setMonthlyData(const QVector<int> &data);
+
+protected:
+    void paintEvent(QPaintEvent *event) override;
+
+private:
+    QVector<int> monthlyData;
 };
 
 #endif // LINECHARTWIDGET_H

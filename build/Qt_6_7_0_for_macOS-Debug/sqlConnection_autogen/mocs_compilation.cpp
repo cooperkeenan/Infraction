@@ -2,4 +2,5 @@
 #include "EWIEGA46WW/moc_dashboard.cpp"
 #include "EWIEGA46WW/moc_incidentwidget.cpp"
 #include "EWIEGA46WW/moc_infractionwidget.cpp"
+#include "EWIEGA46WW/moc_linechartwidget.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"
