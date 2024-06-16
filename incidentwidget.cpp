@@ -56,8 +56,8 @@ IncidentWidget::IncidentWidget(const QString& driver, const QString& incident, c
     // Apply drop shadow effect
     QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect(this);
     shadowEffect->setBlurRadius(5);
-    shadowEffect->setXOffset(3);
-    shadowEffect->setYOffset(3);
+    shadowEffect->setXOffset(5);
+    shadowEffect->setYOffset(5);
     shadowEffect->setColor(Qt::black);
     setGraphicsEffect(shadowEffect);
 }

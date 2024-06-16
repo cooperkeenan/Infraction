@@ -1,18 +1,19 @@
 #include "infractionwidget.h"
 #include <QPainter>
 #include <QVBoxLayout>
+#include <QPainterPath>
 #include <QLabel>
 #include <QGraphicsDropShadowEffect>
 
 InfractionWidget::InfractionWidget(const QString& label, QWidget *parent) : QFrame(parent), infractions(0), m_label(label) {
     setMinimumSize(200, 200);
     setFrameStyle(QFrame::StyledPanel | QFrame::Plain);
-    setStyleSheet("background-color: #2A2E35; border-radius: 10px;");
+    setStyleSheet("background-color: #1E232B; border-radius: 7px;");
 
     QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect(this);
     shadowEffect->setBlurRadius(20);
-    shadowEffect->setXOffset(5);
-    shadowEffect->setYOffset(5);
+    shadowEffect->setXOffset(7);
+    shadowEffect->setYOffset(7);
     shadowEffect->setColor(QColor(0, 0, 0, 150));
     setGraphicsEffect(shadowEffect);
 
@@ -25,7 +26,7 @@ void InfractionWidget::setupUI() {
     // Specific label for this widget
     QLabel *labelWidget = new QLabel(m_label, this);
     labelWidget->setAlignment(Qt::AlignCenter);
-    labelWidget->setStyleSheet("font-size: 16px; color: white; background-color: #1E232B;");
+    labelWidget->setStyleSheet("font-size: 16px; color: white; background-color: transparent;"); // Use transparent background
     layout->addWidget(labelWidget, 0, Qt::AlignBottom);
 
     setLayout(layout);
@@ -49,8 +50,10 @@ void InfractionWidget::paintEvent(QPaintEvent *event) {
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing);
 
-    // Background
-    painter.fillRect(rect(), QColor("#1E232B"));  // Set to the same grey as your interface
+    // Draw rounded rectangle background
+    QPainterPath path;
+    path.addRoundedRect(rect(), 10, 10); // 10 radius for rounded corners
+    painter.fillPath(path, QColor("#1E232B"));  // Use the same background color as set in the stylesheet
 
     // Draw the ring
     QPen pen(QColor("#0072C0"), 10, Qt::SolidLine, Qt::FlatCap);  // Set pen width to 10 for the ring

@@ -32,11 +32,7 @@ dashboard::dashboard(QWidget *parent) :
     QWidget *containerWidget = new QWidget();
     QVBoxLayout *containerLayout = new QVBoxLayout(containerWidget);
 
-    // Create and style the title label
-    QLabel *titleLabel = new QLabel("Infraction Count");
-    titleLabel->setAlignment(Qt::AlignLeft);
-    titleLabel->setStyleSheet("font-size: 24px; color: white; margin-top: 10px; margin-bottom: 5px;");
-    containerLayout->addWidget(titleLabel, 0, Qt::AlignLeft);
+
 
     // Setup Search Bar
     ui->lbl_searchDriver->setPlaceholderText("Search Driver");
@@ -72,7 +68,7 @@ dashboard::dashboard(QWidget *parent) :
 
     // Add city labels with infraction counts
     QList<QPair<QString, QPointF>> depots = {
-        {"London", QPointF(400, 1100)},
+        {"London", QPointF(400, 1000)},
         {"Manchester", QPointF(400, 700)},
         {"Birmingham", QPointF(300, 900)}
     };
@@ -92,7 +88,7 @@ dashboard::dashboard(QWidget *parent) :
         // Add infraction count label
         QGraphicsTextItem* infractionLabel = scene->addText(QString::number(infractionCounts[i]));
         infractionLabel->setPos(depot.second + QPointF(50, 20));  // Adjust position as needed
-        infractionLabel->setDefaultTextColor(Qt::red);
+        infractionLabel->setDefaultTextColor(Qt::green);
         QFont infractionFont = infractionLabel->font();
         infractionFont.setPointSize(20);
         infractionFont.setBold(true);
@@ -121,11 +117,12 @@ dashboard::dashboard(QWidget *parent) :
 
     // Add Line Chart Widget to the layout
     LineChartWidget *lineChart = new LineChartWidget(this);
-    lineChart->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-    lineChart->setFixedHeight(200); // Adjust the height as needed
     QVector<int> monthlyData = {12, 15, 8, 7, 10, 20, 30, 25, 18, 22, 5, 13}; // Example data
+    lineChart->setMinimumSize(400, 300); // Ensure the widget has a minimum size
     lineChart->setMonthlyData(monthlyData);
-    gridLayout->addWidget(lineChart, 2, 4, 1, 2, Qt::AlignTop); // Position the line chart in the grid layout
+    gridLayout->addWidget(lineChart, 2, 4, 1, 2); // Position the line chart in the grid layout
+
+    qDebug() << "Line chart added to layout";
 }
 
 void dashboard::resizeEvent(QResizeEvent *event) {
@@ -142,4 +139,5 @@ dashboard::~dashboard()
 
 void dashboard::on_lineEdit_cursorPositionChanged(int arg1, int arg2)
 {
+
 }

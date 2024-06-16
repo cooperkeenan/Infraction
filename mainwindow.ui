@@ -19,7 +19,13 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #18191A;</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: #18191A;</string>
+   </property>
    <layout class="QGridLayout" name="gridLayout_4">
     <item row="1" column="0">
      <widget class="QStackedWidget" name="stackedWidget">
@@ -30,7 +36,7 @@
        </sizepolicy>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: #2B2B2B;</string>
+       <string notr="true">background-color: #18191A;</string>
       </property>
       <property name="currentIndex">
        <number>0</number>

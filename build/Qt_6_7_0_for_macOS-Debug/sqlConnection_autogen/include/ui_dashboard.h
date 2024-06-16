@@ -29,19 +29,18 @@ public:
     QStackedWidget *stackedWidget;
     QWidget *page;
     QGridLayout *gridLayout;
-    QWidget *widgetContainer;
-    QVBoxLayout *verticalLayout_4;
+    QSpacerItem *verticalSpacer;
+    QSpacerItem *verticalSpacer_2;
     QLineEdit *lbl_searchDriver;
-    QSpacerItem *verticalSpacer_3;
-    QVBoxLayout *verticalLayout_3;
     QSpacerItem *horizontalSpacer_2;
     QGraphicsView *graphicsView;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
     QVBoxLayout *verticalLayout_2;
     QWidget *widget;
-    QSpacerItem *verticalSpacer_2;
-    QSpacerItem *verticalSpacer;
+    QWidget *widgetContainer;
+    QVBoxLayout *verticalLayout_4;
+    QVBoxLayout *verticalLayout_3;
     QWidget *page_2;
 
     void setupUi(QWidget *dashboard)
@@ -54,23 +53,29 @@ public:
         sizePolicy.setVerticalStretch(1);
         sizePolicy.setHeightForWidth(dashboard->sizePolicy().hasHeightForWidth());
         dashboard->setSizePolicy(sizePolicy);
+        dashboard->setStyleSheet(QString::fromUtf8("\n"
+"background-color: #18191A;"));
         verticalLayout = new QVBoxLayout(dashboard);
         verticalLayout->setObjectName("verticalLayout");
         stackedWidget = new QStackedWidget(dashboard);
         stackedWidget->setObjectName("stackedWidget");
         sizePolicy.setHeightForWidth(stackedWidget->sizePolicy().hasHeightForWidth());
         stackedWidget->setSizePolicy(sizePolicy);
-        stackedWidget->setStyleSheet(QString::fromUtf8("\n"
-"background-color: rgb(41, 41, 41);"));
+        stackedWidget->setStyleSheet(QString::fromUtf8("background-color: #18191A;"));
         page = new QWidget();
         page->setObjectName("page");
+        page->setStyleSheet(QString::fromUtf8("background-color: #18191A;"));
         gridLayout = new QGridLayout(page);
         gridLayout->setObjectName("gridLayout");
-        widgetContainer = new QWidget(page);
-        widgetContainer->setObjectName("widgetContainer");
-        verticalLayout_4 = new QVBoxLayout(widgetContainer);
-        verticalLayout_4->setObjectName("verticalLayout_4");
-        lbl_searchDriver = new QLineEdit(widgetContainer);
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        gridLayout->addItem(verticalSpacer, 4, 2, 1, 1);
+
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        gridLayout->addItem(verticalSpacer_2, 1, 2, 1, 1);
+
+        lbl_searchDriver = new QLineEdit(page);
         lbl_searchDriver->setObjectName("lbl_searchDriver");
         QSizePolicy sizePolicy1(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
         sizePolicy1.setHorizontalStretch(0);
@@ -84,28 +89,16 @@ public:
         lbl_searchDriver->setFont(font);
         lbl_searchDriver->setCursor(QCursor(Qt::IBeamCursor));
 
-        verticalLayout_4->addWidget(lbl_searchDriver);
-
-        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        verticalLayout_4->addItem(verticalSpacer_3);
-
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName("verticalLayout_3");
-
-        verticalLayout_4->addLayout(verticalLayout_3);
-
-
-        gridLayout->addWidget(widgetContainer, 0, 4, 1, 1);
+        gridLayout->addWidget(lbl_searchDriver, 0, 1, 1, 1);
 
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
-        gridLayout->addItem(horizontalSpacer_2, 1, 4, 1, 1);
+        gridLayout->addItem(horizontalSpacer_2, 2, 4, 1, 1);
 
         graphicsView = new QGraphicsView(page);
         graphicsView->setObjectName("graphicsView");
 
-        gridLayout->addWidget(graphicsView, 0, 1, 4, 1);
+        gridLayout->addWidget(graphicsView, 1, 1, 4, 1);
 
         scrollArea = new QScrollArea(page);
         scrollArea->setObjectName("scrollArea");
@@ -118,7 +111,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 456, 313));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 456, 288));
         sizePolicy1.setHeightForWidth(scrollAreaWidgetContents->sizePolicy().hasHeightForWidth());
         scrollAreaWidgetContents->setSizePolicy(sizePolicy1);
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
@@ -132,15 +125,19 @@ public:
 
         scrollArea->setWidget(scrollAreaWidgetContents);
 
-        gridLayout->addWidget(scrollArea, 3, 4, 1, 1);
+        gridLayout->addWidget(scrollArea, 4, 4, 1, 1);
 
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+        widgetContainer = new QWidget(page);
+        widgetContainer->setObjectName("widgetContainer");
+        verticalLayout_4 = new QVBoxLayout(widgetContainer);
+        verticalLayout_4->setObjectName("verticalLayout_4");
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName("verticalLayout_3");
 
-        gridLayout->addItem(verticalSpacer_2, 0, 2, 1, 1);
+        verticalLayout_4->addLayout(verticalLayout_3);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        gridLayout->addItem(verticalSpacer, 3, 2, 1, 1);
+        gridLayout->addWidget(widgetContainer, 1, 4, 1, 1);
 
         stackedWidget->addWidget(page);
         page_2 = new QWidget();

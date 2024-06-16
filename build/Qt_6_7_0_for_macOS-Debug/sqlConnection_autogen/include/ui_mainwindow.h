@@ -70,15 +70,17 @@ public:
         sizePolicy.setVerticalStretch(1);
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
         MainWindow->setSizePolicy(sizePolicy);
+        MainWindow->setStyleSheet(QString::fromUtf8("background-color: #18191A;"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
+        centralwidget->setStyleSheet(QString::fromUtf8("background-color: #18191A;"));
         gridLayout_4 = new QGridLayout(centralwidget);
         gridLayout_4->setObjectName("gridLayout_4");
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName("stackedWidget");
         sizePolicy.setHeightForWidth(stackedWidget->sizePolicy().hasHeightForWidth());
         stackedWidget->setSizePolicy(sizePolicy);
-        stackedWidget->setStyleSheet(QString::fromUtf8("background-color: #2B2B2B;"));
+        stackedWidget->setStyleSheet(QString::fromUtf8("background-color: #18191A;"));
         page = new QWidget();
         page->setObjectName("page");
         gridLayout_3 = new QGridLayout(page);
